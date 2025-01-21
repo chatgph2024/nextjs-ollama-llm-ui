@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">
-  Fully-featured & beautiful web interface for Ollama LLMs
+  Fully-featured web interface for Ollama LLMs
 </h1>
 
 <div align="center">
@@ -15,6 +15,8 @@
 
 Get up and running with Large Language Models **quickly**, **locally** and even **offline**.
 This project aims to be the easiest way for you to get started with LLMs. No tedious and annoying setup required!
+
+> This is a hobby project. If you want a more complete experience, I suggest taking a look at [this](https://github.com/open-webui/open-webui) instead.
 
 # Features ✨
 
@@ -40,22 +42,19 @@ To use the web interface, these requisites must be met:
 1. Download [Ollama](https://ollama.com/download) and have it running. Or run it in a Docker container. Check the [docs](https://github.com/ollama/ollama) for instructions.
 2. Node.js (18+) and npm is required. [Download](https://nodejs.org/en/download)
 
-# Deploy your own to Vercel or Netlify in one click ✨
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjakobhoeg%2Fnextjs-ollama-llm-ui&env=NEXT_PUBLIC_OLLAMA_URL&envDescription=Your%20Ollama%20URL) [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jakobhoeg/nextjs-ollama-llm-ui)
-
-You'll need to set your [OLLAMA_ORIGINS](https://github.com/ollama/ollama/blob/main/docs/faq.md) environment variable on your machine that is running Ollama:
-
-```
-OLLAMA_ORIGINS="https://your-app.vercel.app/"
-```
-
 # Installation 📖
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/nextjs-ollama-llm-ui.svg?columns=3)](https://repology.org/project/nextjs-ollama-llm-ui/versions)
 
 Use a pre-build package from one of the supported package managers to run a local environment of the web interface.
 Alternatively you can install from source with the instructions below.
+
+> [!NOTE]  
+> If your frontend runs on something other than `http://localhost` or `http://127.0.0.1`, you'll need to set the OLLAMA_ORIGINS to your frontend url.
+>
+> This is also stated in the [documentation](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server):
+> 
+> `Ollama allows cross-origin requests from 127.0.0.1 and 0.0.0.0 by default. Additional origins can be configured with OLLAMA_ORIGINS`
 
 ## Install from source
 
@@ -100,11 +99,11 @@ npm run dev
 # Upcoming features
 
 This is a to-do list consisting of upcoming features.
-- ⬜️ Ability to send an image in the prompt to utilize vision language models.
-- ⬜️ Ability to regenerate responses
-- ⬜️ Import and export chats
-- ⬜️ Voice input support
+- ✅ Voice input support
 - ✅ Code syntax highlighting
+- ✅ Ability to send an image in the prompt to utilize vision language models.
+- ✅ Ability to regenerate responses
+- ⬜️ Import and export chats
 
 # Tech stack
 
@@ -123,3 +122,5 @@ This is a to-do list consisting of upcoming features.
 # Helpful links
 
 [Medium Article](https://medium.com/@bartek.lewicz/launch-your-own-chatgpt-clone-for-free-on-colab-shareable-and-online-in-less-than-10-minutes-da19e44be5eb) - How to launch your own ChatGPT clone for free on Google Colab. By Bartek Lewicz.
+
+[Lobehub mention](https://lobehub.com/blog/5-ollama-web-ui-recommendation#5-next-js-ollama-llm-ui) - Five Excellent Free Ollama WebUI Client Recommendations
